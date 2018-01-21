@@ -10,14 +10,41 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import ObjectMapper
+import GoogleMobileAds
 
 
-
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADInterstitialDelegate {
 
     var articlesArray = [Articles]()
     
     var myRefreshControl = UIRefreshControl()
+    
+    var interstitial: GADInterstitial?
+    
+    lazy var adBannerView: GADBannerView = {
+        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adBannerView.adUnitID = "ca-app-pub-7610769761173728/3787150087"
+        adBannerView.delegate = self
+        adBannerView.rootViewController = self
+        
+        return adBannerView
+    }()
+    
+    private func createAndLoadInterstitial() -> GADInterstitial? {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-7610769761173728/3198980811")
+        
+        guard let interstitial = interstitial else {
+            return nil
+        }
+        
+        let request = GADRequest()
+        // Remove the following line before you upload the app
+        request.testDevices = [ kGADSimulatorID ]
+        interstitial.load(request)
+        interstitial.delegate = self
+        
+        return interstitial
+    }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         
@@ -37,12 +64,42 @@ class HomeTableViewController: UITableViewController {
         }
     }
     
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("Interstitial loaded successfully")
+        ad.present(fromRootViewController: self)
+    }
+    
+    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        print("Fail to receive interstitial")
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Fail to receive ads")
+        print(error)
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner loaded successfully")
+        
+        // Reposition the banner ad to create a slide down effect
+        let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
+        bannerView.transform = translateTransform
+        
+        UIView.animate(withDuration: 0.5) {
+            bannerView.transform = CGAffineTransform.identity
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Top Crypto Coins Headlines"
         
         self.view.backgroundColor = UIColor.lightGray
+        
+        interstitial = createAndLoadInterstitial()
+        
+        adBannerView.load(GADRequest())
         
         // Setting tableView
         // Configure Refresh Control
@@ -77,6 +134,16 @@ class HomeTableViewController: UITableViewController {
         
     }
 
+    
+     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return adBannerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return adBannerView.frame.height
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let article = self.articlesArray[indexPath.row]

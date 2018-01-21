@@ -9,6 +9,7 @@ target 'CryptoCoinsNews' do
   pod 'Alamofire', '~> 4.5'
   pod 'SwiftyJSON'
   pod 'ObjectMapper', '~> 3.0.0'
+  pod 'Firebase/AdMob'
 
   target 'CryptoCoinsNewsTests' do
     inherit! :search_paths
