@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538253506.231609"
+            timestampString = "538255129.7894959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -42,12 +42,12 @@
                   moduleName = "CryptoCoinsNews"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alaattinbedir/Projects/CryptoCoinsNews/CryptoCoinsNews/API/ArticlesService.swift"
-                  timestampString = "538253183.895067"
+                  timestampString = "538254892.308188"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
                   endingLineNumber = "35"
-                  offsetFromSymbolStart = "108">
+                  offsetFromSymbolStart = "127">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -57,12 +57,12 @@
                   moduleName = "CryptoCoinsNews"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alaattinbedir/Projects/CryptoCoinsNews/CryptoCoinsNews/API/ArticlesService.swift"
-                  timestampString = "538253183.899801"
+                  timestampString = "538254892.313385"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
                   endingLineNumber = "36"
-                  offsetFromSymbolStart = "36">
+                  offsetFromSymbolStart = "40">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538253506.2320729"
+            timestampString = "538255129.790473"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538253506.232372"
+            timestampString = "538255129.791063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538253506.2327909"
+            timestampString = "538255129.791851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/Controllers/HomeTableViewController.swift"
-            timestampString = "538253506.233145"
+            timestampString = "538255129.792719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/Controllers/HomeTableViewController.swift"
-            timestampString = "538253506.233568"
+            timestampString = "538255129.7942261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"

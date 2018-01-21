@@ -40,7 +40,7 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
         
         let request = GADRequest()
         // Remove the following line before you upload the app
-        request.testDevices = [ kGADSimulatorID ]
+//        request.testDevices = [ kGADSimulatorID ]
         interstitial.load(request)
         interstitial.delegate = self
         
