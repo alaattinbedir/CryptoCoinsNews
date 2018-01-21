@@ -18,21 +18,15 @@ public class ArticlesService {
     
     private init() {
         
-        // Create the server trust policies
-        let serverTrustPolicies: [String: ServerTrustPolicy] = [
-            "newsapi.org": .disableEvaluation
-        ]
-        
         // Create custom manager
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
         let manager = Alamofire.SessionManager(
             configuration: URLSessionConfiguration.default,
-            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+            serverTrustPolicyManager: CustomServerTrustPoliceManager()
         )
         
-        self.manager = manager
-        //Alamofire.SessionManager.default
+        self.manager = manager        
     }
     
     func getArticles(completion:@escaping (Array<Articles>) -> Void, failure:@escaping (Int, String) -> Void) -> Void{
@@ -68,5 +62,14 @@ public class ArticlesService {
         }
     }
     
+}
+
+class CustomServerTrustPoliceManager : ServerTrustPolicyManager {
+    override func serverTrustPolicy(forHost host: String) -> ServerTrustPolicy? {
+        return .disableEvaluation
+    }
+    public init() {
+        super.init(policies: [:])
+    }
 }
 
