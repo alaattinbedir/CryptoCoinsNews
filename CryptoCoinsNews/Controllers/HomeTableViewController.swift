@@ -21,7 +21,7 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Latest Coin News"
+        self.navigationItem.title = "Top Crypto Coins Headlines"
         
         self.view.backgroundColor = UIColor.lightGray
         
