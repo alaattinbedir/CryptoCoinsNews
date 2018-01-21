@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538221145.153616"
+            timestampString = "538223035.020817"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "getArticles(completion:failure:)"
             landmarkType = "7">
             <Locations>
@@ -42,11 +42,11 @@
                   moduleName = "CryptoCoinsNews"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alaattinbedir/Projects/CryptoCoinsNews/CryptoCoinsNews/API/ArticlesService.swift"
-                  timestampString = "538221145.273228"
+                  timestampString = "538223035.125049"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
                   offsetFromSymbolStart = "127">
                </Location>
                <Location
@@ -57,11 +57,11 @@
                   moduleName = "CryptoCoinsNews"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alaattinbedir/Projects/CryptoCoinsNews/CryptoCoinsNews/API/ArticlesService.swift"
-                  timestampString = "538221145.27597"
+                  timestampString = "538223035.127403"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
                   offsetFromSymbolStart = "40">
                </Location>
             </Locations>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538221145.153968"
+            timestampString = "538223035.020887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "getArticles(completion:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538221145.154217"
+            timestampString = "538223035.020938"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "getArticles(completion:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,61 +106,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538221145.154435"
+            timestampString = "538223035.021004"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "getArticles(completion:failure:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CryptoCoinsNews/HomeTableViewController.swift"
-            timestampString = "538221145.15466"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CryptoCoinsNews.HomeTableViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CryptoCoinsNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alaattinbedir/Projects/CryptoCoinsNews/CryptoCoinsNews/HomeTableViewController.swift"
-                  timestampString = "538221145.2915879"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;CryptoCoinsNews.Articles&gt;) -&gt; () in CryptoCoinsNews.HomeTableViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CryptoCoinsNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alaattinbedir/Projects/CryptoCoinsNews/CryptoCoinsNews/HomeTableViewController.swift"
-                  timestampString = "538221145.293519"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "18">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

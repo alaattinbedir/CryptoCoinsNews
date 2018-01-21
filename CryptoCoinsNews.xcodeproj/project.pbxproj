@@ -16,6 +16,7 @@
 		84D99456200FB4DD001234ED /* CryptoCoinsNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D99455200FB4DD001234ED /* CryptoCoinsNewsTests.swift */; };
 		84D99465200FB9DF001234ED /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D99464200FB9DF001234ED /* Articles.swift */; };
 		84D99467200FBB06001234ED /* ArticlesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D99466200FBB06001234ED /* ArticlesService.swift */; };
+		84D9946B2014A045001234ED /* NewsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9946A2014A045001234ED /* NewsCellTableViewCell.swift */; };
 		923BBFDC360409A6E1EF36CF /* Pods_CryptoCoinsNewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99320685FC61BFB19E733D2 /* Pods_CryptoCoinsNewsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		84D99457200FB4DD001234ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D99464200FB9DF001234ED /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		84D99466200FBB06001234ED /* ArticlesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesService.swift; sourceTree = "<group>"; };
+		84D9946A2014A045001234ED /* NewsCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellTableViewCell.swift; sourceTree = "<group>"; };
 		C5961A16AE5F1A4F3E61E29C /* Pods-CryptoCoinsNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCoinsNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCoinsNews/Pods-CryptoCoinsNews.release.xcconfig"; sourceTree = "<group>"; };
 		C99320685FC61BFB19E733D2 /* Pods_CryptoCoinsNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoCoinsNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA25A8D90901ECB20798485C /* Pods_CryptoCoinsNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoCoinsNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 		84D9943F200FB4DD001234ED /* CryptoCoinsNews */ = {
 			isa = PBXGroup;
 			children = (
+				84D994682014A01D001234ED /* Views */,
 				84D99460200FB90C001234ED /* API */,
 				84D99461200FB917001234ED /* Models */,
 				84D99440200FB4DD001234ED /* AppDelegate.swift */,
@@ -128,6 +131,22 @@
 				84D99464200FB9DF001234ED /* Articles.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		84D994682014A01D001234ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84D994692014A029001234ED /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84D994692014A029001234ED /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84D9946A2014A045001234ED /* NewsCellTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		88B1E7854945E806AF1A855A /* Pods */ = {
@@ -365,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D9946B2014A045001234ED /* NewsCellTableViewCell.swift in Sources */,
 				84D99467200FBB06001234ED /* ArticlesService.swift in Sources */,
 				84D99443200FB4DD001234ED /* HomeTableViewController.swift in Sources */,
 				84D99465200FB9DF001234ED /* Articles.swift in Sources */,
