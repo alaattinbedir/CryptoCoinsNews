@@ -74,7 +74,7 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 240.0
+        return 260.0
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
