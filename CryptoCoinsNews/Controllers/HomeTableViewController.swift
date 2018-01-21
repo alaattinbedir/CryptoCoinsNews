@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 import GoogleMobileAds
+import Firebase
 
 
 class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADInterstitialDelegate {
@@ -93,9 +94,17 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         self.navigationItem.title = "Top Crypto Coins Headlines"
         
         self.view.backgroundColor = UIColor.lightGray
+        
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: "id-\(self.navigationItem.title!)" as NSObject,
+            AnalyticsParameterItemName: self.navigationItem.title! as NSObject,
+            AnalyticsParameterContentType: "launch" as NSObject
+            ])
         
         interstitial = createAndLoadInterstitial()
         

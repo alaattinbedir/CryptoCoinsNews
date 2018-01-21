@@ -10,7 +10,7 @@ target 'CryptoCoinsNews' do
   pod 'SwiftyJSON'
   pod 'ObjectMapper', '~> 3.0.0'
   pod 'Firebase/AdMob'
-
+  
   target 'CryptoCoinsNewsTests' do
     inherit! :search_paths
     # Pods for testing    

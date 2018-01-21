@@ -25,9 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barStyle = .blackOpaque
         self.acceptInvalidSSLCerts()
         
-        //banner reklam kimligi
-        //ca-app-pub-7610769761173728/3787150087
-        
         return true
     }
     
