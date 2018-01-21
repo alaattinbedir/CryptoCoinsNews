@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         GADMobileAds.configure(withApplicationID: "ca-app-pub-7610769761173728~9720157134")
         
+        
         UINavigationBar.appearance().barStyle = .blackOpaque
         self.acceptInvalidSSLCerts()
         

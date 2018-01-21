@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538252022.329229"
+            timestampString = "538253506.231609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -42,12 +42,12 @@
                   moduleName = "CryptoCoinsNews"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alaattinbedir/Projects/CryptoCoinsNews/CryptoCoinsNews/API/ArticlesService.swift"
-                  timestampString = "538223352.314163"
+                  timestampString = "538253183.895067"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
                   endingLineNumber = "35"
-                  offsetFromSymbolStart = "127">
+                  offsetFromSymbolStart = "108">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -57,12 +57,12 @@
                   moduleName = "CryptoCoinsNews"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alaattinbedir/Projects/CryptoCoinsNews/CryptoCoinsNews/API/ArticlesService.swift"
-                  timestampString = "538223352.316258"
+                  timestampString = "538253183.899801"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
                   endingLineNumber = "36"
-                  offsetFromSymbolStart = "40">
+                  offsetFromSymbolStart = "36">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538252022.329317"
+            timestampString = "538253506.2320729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538252022.32938"
+            timestampString = "538253506.232372"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptoCoinsNews/API/ArticlesService.swift"
-            timestampString = "538252022.329439"
+            timestampString = "538253506.2327909"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -128,6 +128,38 @@
             startingLineNumber = "248"
             endingLineNumber = "248"
             landmarkName = "trustIsValid(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptoCoinsNews/Controllers/HomeTableViewController.swift"
+            timestampString = "538253506.233145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "adViewDidReceiveAd(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptoCoinsNews/Controllers/HomeTableViewController.swift"
+            timestampString = "538253506.233568"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "adView(_:didFailToReceiveAdWithError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -94,7 +94,11 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if (UserDefaults.standard.string(forKey: "loaded") != nil) {
+            interstitial = createAndLoadInterstitial()
+        }
         
+        UserDefaults.standard.set("yes", forKey: "loaded")
         
         self.navigationItem.title = "Top Crypto Coins Headlines"
         
@@ -106,7 +110,7 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
             AnalyticsParameterContentType: "launch" as NSObject
             ])
         
-        interstitial = createAndLoadInterstitial()
+        
         
         adBannerView.load(GADRequest())
         
