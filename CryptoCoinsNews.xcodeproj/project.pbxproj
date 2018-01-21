@@ -267,7 +267,7 @@
 				TargetAttributes = {
 					84D9943C200FB4DD001234ED = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					84D99450200FB4DD001234ED = {
 						CreatedOnToolsVersion = 9.2;
@@ -591,12 +591,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KHRD8446CX;
 				INFOPLIST_FILE = CryptoCoinsNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magiclampgames.CryptoCoinsNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5488b284-2f72-419e-bbd6-6510eec04beb";
+				PROVISIONING_PROFILE_SPECIFIER = "Dev-CryptoCoinsNews";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -608,12 +610,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KHRD8446CX;
 				INFOPLIST_FILE = CryptoCoinsNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magiclampgames.CryptoCoinsNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6e382098-67f7-4307-b1ff-3d9ac08242fe";
+				PROVISIONING_PROFILE_SPECIFIER = "Appstore-CryptoCoinsNews";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
