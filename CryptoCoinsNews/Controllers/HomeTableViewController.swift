@@ -17,6 +17,23 @@ class HomeTableViewController: UITableViewController {
 
     var articlesArray = [Articles]()
     
+    var myRefreshControl = UIRefreshControl()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        // Get messages from service
+        ArticlesService.sharedInstance.getArticles(completion: { (articles) in
+            self.articlesArray = articles
+            if self.self.articlesArray.count > 0 {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    refreshControl.endRefreshing()
+                }
+            }
+        }) { (code, error) in
+            self.showMessage(message: error)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +43,20 @@ class HomeTableViewController: UITableViewController {
         self.view.backgroundColor = UIColor.lightGray
         
         // Setting tableView
+        // Configure Refresh Control
+        
+        self.myRefreshControl.addTarget(self, action: #selector(handleRefresh(_:)), for: .valueChanged)
+        self.myRefreshControl.tintColor = UIColor.white
+        
+        let attributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        self.myRefreshControl.attributedTitle = NSAttributedString(string: "Fetching Latest Data ...", attributes: attributes)
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            self.tableView.refreshControl = myRefreshControl
+        } else {
+            self.tableView.addSubview(self.myRefreshControl)
+        }
+        
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 197.0
         self.tableView.separatorStyle = .none
