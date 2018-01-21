@@ -63,9 +63,6 @@ class HomeTableViewController: UITableViewController {
         webVC.delegate = self
         self.navigationController?.pushViewController(webVC, animated: true)
         
-//        let webVC = SwiftModalWebVC(urlString: article.url!, theme: .dark, dismissButtonStyle: .arrow)
-//        self.present(webVC, animated: true, completion: nil)
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
