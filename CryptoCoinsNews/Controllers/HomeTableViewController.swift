@@ -25,10 +25,12 @@ class HomeTableViewController: UITableViewController {
         ArticlesService.sharedInstance.getArticles(completion: { (articles) in
             self.articlesArray = articles
             if self.self.articlesArray.count > 0 {
-                DispatchQueue.main.async {
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.tableView.reloadData()
                     refreshControl.endRefreshing()
                 }
+                
             }
         }) { (code, error) in
             self.showMessage(message: error)
@@ -49,7 +51,7 @@ class HomeTableViewController: UITableViewController {
         self.myRefreshControl.tintColor = UIColor.white
         
         let attributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
-        self.myRefreshControl.attributedTitle = NSAttributedString(string: "Fetching Latest Data ...", attributes: attributes)
+        self.myRefreshControl.attributedTitle = NSAttributedString(string: "Fetching Latest Headlines ...", attributes: attributes)
         // Add Refresh Control to Table View
         if #available(iOS 10.0, *) {
             self.tableView.refreshControl = myRefreshControl
