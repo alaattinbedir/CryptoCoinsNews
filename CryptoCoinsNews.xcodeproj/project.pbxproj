@@ -617,8 +617,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magiclampgames.CryptoCoinsNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6e382098-67f7-4307-b1ff-3d9ac08242fe";
-				PROVISIONING_PROFILE_SPECIFIER = "Appstore-CryptoCoinsNews";
+				PROVISIONING_PROFILE = "4386f49e-b0fd-476a-89b4-597bba2bb91c";
+				PROVISIONING_PROFILE_SPECIFIER = "Adhoc-CryptoCoinsNews";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
