@@ -1,5 +1,5 @@
 //
-//  NewsCellTableViewCell.swift
+//  CoinNewsTableViewCell.swift
 //  CryptoCoinsNews
 //
 //  Created by Alaattin Bedir on 21.01.2018.
@@ -8,9 +8,8 @@
 
 import UIKit
 
-class NewsCellTableViewCell: UITableViewCell {
+class CoinNewsTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -25,5 +24,5 @@ class NewsCellTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

@@ -12,6 +12,7 @@ import SwiftyJSON
 import ObjectMapper
 
 
+
 class HomeTableViewController: UITableViewController {
 
     var articlesArray = [Articles]()
@@ -20,11 +21,17 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Coin News Headlines"
+        
+        self.view.backgroundColor = UIColor.lightGray
         
         // Setting tableView
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 66.0
+        self.tableView.estimatedRowHeight = 197.0
         self.tableView.separatorStyle = .none
+        
+        
+        self.tableView.register(CoinNewsTableViewCell.self, forCellReuseIdentifier: "NewsCell")
         
         // Get messages from service
         ArticlesService.sharedInstance.getArticles(completion: { (articles) in
@@ -42,10 +49,10 @@ class HomeTableViewController: UITableViewController {
         
         let article = self.articlesArray[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCellTableViewCell
+        let cell = Bundle.main.loadNibNamed("CoinNewsTableViewCell", owner: self, options: nil)?.first as! CoinNewsTableViewCell
         
-        cell.titleLabel.text = article.title!
-        cell.descriptionLabel.text = article.description!
+        cell.titleLabel.text = article.title
+        cell.descriptionLabel.text = article.description
         cell.newsImageView.loadImageUsingCache(withUrl: article.urlToImage!)
         
         return cell
@@ -59,6 +66,14 @@ class HomeTableViewController: UITableViewController {
         return articlesArray.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 230.0
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+        //return UIStatusBarStyle.default   // Make dark again
+    }
     
     fileprivate func showMessage(message : String) {
         let alert = UIAlertController(title: "Alert",
