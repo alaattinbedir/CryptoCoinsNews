@@ -1,0 +1,6 @@
+framework module Pods_CryptoCoinsNewsTests {
+  umbrella header "Pods-CryptoCoinsNewsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
