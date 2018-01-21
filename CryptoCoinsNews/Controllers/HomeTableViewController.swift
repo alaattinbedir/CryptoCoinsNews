@@ -21,7 +21,7 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Coin News Headlines"
+        self.navigationItem.title = "Latest Coin News"
         
         self.view.backgroundColor = UIColor.lightGray
         
@@ -29,7 +29,6 @@ class HomeTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 197.0
         self.tableView.separatorStyle = .none
-        
         
         self.tableView.register(CoinNewsTableViewCell.self, forCellReuseIdentifier: "NewsCell")
         
@@ -55,6 +54,18 @@ class HomeTableViewController: UITableViewController {
         cell.newsImageView.loadImageUsingCache(withUrl: article.urlToImage!)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let article = self.articlesArray[indexPath.row]
+        let webVC = SwiftWebVC(urlString: article.url!)
+        webVC.delegate = self
+        self.navigationController?.pushViewController(webVC, animated: true)
+        
+//        let webVC = SwiftModalWebVC(urlString: article.url!, theme: .dark, dismissButtonStyle: .arrow)
+//        self.present(webVC, animated: true, completion: nil)
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -102,6 +113,17 @@ class HomeTableViewController: UITableViewController {
     }
 
 
+}
+
+extension HomeTableViewController: SwiftWebVCDelegate {
+    
+    func didStartLoading() {
+        print("Started loading.")
+    }
+    
+    func didFinishLoading(success: Bool) {
+        print("Finished loading. Success: \(success).")
+    }
 }
 
 let imageCache = NSCache<NSString, AnyObject>()
