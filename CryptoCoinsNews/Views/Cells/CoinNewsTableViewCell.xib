@@ -20,48 +20,35 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cLC-GG-kyb">
-                        <rect key="frame" x="43" y="5" width="232" height="160"/>
+                        <rect key="frame" x="2" y="5" width="314" height="176"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWF-TU-mRd">
-                        <rect key="frame" x="16" y="169" width="286" height="36"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWF-TU-mRd">
+                        <rect key="frame" x="16" y="189" width="286" height="65"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="36" id="FSa-aq-350"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="50N-qP-QcE"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX9-t2-k8X">
-                        <rect key="frame" x="16" y="207" width="286" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="h36-qa-UJY"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" red="0.14928353362277069" green="0.14928353362277069" blue="0.14928353362277069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="cLC-GG-kyb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="43" id="42H-CT-xHb"/>
-                    <constraint firstItem="cLC-GG-kyb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="60Y-e7-ain"/>
-                    <constraint firstItem="lX9-t2-k8X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="99Z-an-9mW"/>
-                    <constraint firstAttribute="trailing" secondItem="EWF-TU-mRd" secondAttribute="trailing" constant="16" id="BeW-Sp-OfS"/>
-                    <constraint firstItem="lX9-t2-k8X" firstAttribute="top" secondItem="EWF-TU-mRd" secondAttribute="bottom" constant="2" id="Cew-sQ-a9m"/>
-                    <constraint firstItem="EWF-TU-mRd" firstAttribute="top" secondItem="cLC-GG-kyb" secondAttribute="bottom" constant="4" id="MEg-Xd-AKL"/>
-                    <constraint firstAttribute="bottom" secondItem="lX9-t2-k8X" secondAttribute="bottom" constant="2.5" id="QVz-Lx-SvM"/>
-                    <constraint firstAttribute="trailing" secondItem="lX9-t2-k8X" secondAttribute="trailing" constant="16" id="ayv-Yg-wGL"/>
-                    <constraint firstItem="EWF-TU-mRd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cbh-p0-bg7"/>
-                    <constraint firstAttribute="trailing" secondItem="cLC-GG-kyb" secondAttribute="trailing" constant="43" id="yeq-kX-eDv"/>
+                    <constraint firstItem="EWF-TU-mRd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="36V-br-5px"/>
+                    <constraint firstAttribute="bottom" secondItem="EWF-TU-mRd" secondAttribute="bottom" constant="5" id="BDP-jT-M1H"/>
+                    <constraint firstItem="EWF-TU-mRd" firstAttribute="top" secondItem="cLC-GG-kyb" secondAttribute="bottom" constant="8" id="L5A-hA-Kjc"/>
+                    <constraint firstItem="cLC-GG-kyb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="WtC-ut-HP5"/>
+                    <constraint firstAttribute="trailing" secondItem="EWF-TU-mRd" secondAttribute="trailing" constant="16" id="aDZ-h6-tWc"/>
+                    <constraint firstItem="cLC-GG-kyb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="hgd-S5-tca"/>
+                    <constraint firstAttribute="trailing" secondItem="cLC-GG-kyb" secondAttribute="trailing" constant="2" id="n17-LV-txW"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="descriptionLabel" destination="lX9-t2-k8X" id="3ub-5k-dZJ"/>
                 <outlet property="newsImageView" destination="cLC-GG-kyb" id="za4-zg-a6s"/>
                 <outlet property="titleLabel" destination="EWF-TU-mRd" id="psy-U2-eL2"/>
             </connections>
-            <point key="canvasLocation" x="-1534" y="-125"/>
+            <point key="canvasLocation" x="-1507" y="-230"/>
         </tableViewCell>
     </objects>
 </document>

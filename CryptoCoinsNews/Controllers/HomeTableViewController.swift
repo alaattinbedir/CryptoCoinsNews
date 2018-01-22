@@ -22,6 +22,8 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
     
     var interstitial: GADInterstitial?
     
+    var loadedAd:Bool = false
+    
     lazy var adBannerView: GADBannerView = {
         let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         adBannerView.adUnitID = "ca-app-pub-7610769761173728/3787150087"
@@ -77,11 +79,12 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("Fail to receive ads")
         print(error)
+        loadedAd = false
     }
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("Banner loaded successfully")
-        
+        loadedAd = true
         // Reposition the banner ad to create a slide down effect
         let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
         bannerView.transform = translateTransform
@@ -100,7 +103,7 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
         
         UserDefaults.standard.set("yes", forKey: "loaded")
         
-        self.navigationItem.title = "Top Crypto Coins Headlines"
+        self.navigationItem.title = "Top Cryptocurrency Headlines"
         
         self.view.backgroundColor = UIColor.lightGray
         
@@ -152,9 +155,8 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
         return adBannerView
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        return adBannerView.frame.height
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {        
+        return loadedAd ?  adBannerView.frame.height : 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -163,7 +165,7 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
         
         let cell = Bundle.main.loadNibNamed("CoinNewsTableViewCell", owner: self, options: nil)?.first as! CoinNewsTableViewCell
         cell.titleLabel.text = article.title
-        cell.descriptionLabel.text = article.description
+//        cell.descriptionLabel.text = article.description
         cell.newsImageView.loadImageUsingCache(withUrl: article.urlToImage!)
         
         return cell
