@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         UINavigationBar.appearance().barStyle = .blackOpaque
-        self.acceptInvalidSSLCerts()
         
         return true
     }
@@ -52,49 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-    func acceptInvalidSSLCerts()
-    {
-        let serverTrustPolicies: [String: ServerTrustPolicy] = [
-            "time.org": .pinCertificates(
-                certificates: ServerTrustPolicy.certificates(),
-                validateCertificateChain: true,
-                validateHost: true
-            ),
-            "newsapi.org": .disableEvaluation
-        ]
-        
-        let manager = Alamofire.SessionManager(
-            configuration: URLSessionConfiguration.default,
-            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-        )
-        print("trying to accept invalid certs")
-        
-        manager.delegate.sessionDidReceiveChallenge = { session, challenge in
-            var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
-            var credential: URLCredential?
-            
-            print("received challenge")
-            
-            if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
-                disposition = URLSession.AuthChallengeDisposition.useCredential
-                credential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
-            } else {
-                if challenge.previousFailureCount > 0 {
-                    disposition = .cancelAuthenticationChallenge
-                } else {
-                    credential = manager.session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
-                    
-                    if credential != nil {
-                        disposition = .useCredential
-                    }
-                }
-            }
-            
-            return (disposition, credential)
-        }
-    }
-
 
 }
 
