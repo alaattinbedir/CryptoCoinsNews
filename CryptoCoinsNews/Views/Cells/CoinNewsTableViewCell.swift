@@ -12,7 +12,7 @@ class CoinNewsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -165,7 +165,6 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
         
         let cell = Bundle.main.loadNibNamed("CoinNewsTableViewCell", owner: self, options: nil)?.first as! CoinNewsTableViewCell
         cell.titleLabel.text = article.title
-//        cell.descriptionLabel.text = article.description
         cell.newsImageView.loadImageUsingCache(withUrl: article.urlToImage!)
         
         return cell
