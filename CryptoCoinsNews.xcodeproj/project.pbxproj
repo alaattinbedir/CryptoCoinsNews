@@ -602,6 +602,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = KHRD8446CX;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CryptoCoinsNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magiclampgames.CryptoCoinsNews;
@@ -622,6 +623,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KHRD8446CX;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CryptoCoinsNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magiclampgames.CryptoCoinsNews;
