@@ -135,7 +135,6 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 197.0
         self.tableView.separatorStyle = .none
-        
         self.tableView.register(CoinNewsTableViewCell.self, forCellReuseIdentifier: "NewsCell")
         
         // Get messages from service

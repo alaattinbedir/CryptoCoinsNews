@@ -23,7 +23,7 @@ class CoinNewsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         let customColorView = UIView()
-        customColorView.backgroundColor = UIColor.lightGray
+        customColorView.backgroundColor = UIColor.darkGray
         
         self.selectedBackgroundView =  customColorView
         // Configure the view for the selected state
