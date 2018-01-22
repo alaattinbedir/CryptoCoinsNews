@@ -604,7 +604,7 @@
 				DEVELOPMENT_TEAM = KHRD8446CX;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CryptoCoinsNews/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magiclampgames.CryptoCoinsNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -626,8 +626,9 @@
 				DEVELOPMENT_TEAM = KHRD8446CX;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CryptoCoinsNews/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.magiclampgames.CryptoCoinsNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6e382098-67f7-4307-b1ff-3d9ac08242fe";
