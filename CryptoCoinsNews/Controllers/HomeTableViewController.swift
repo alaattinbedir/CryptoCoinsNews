@@ -69,6 +69,7 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
     
     func interstitialDidReceiveAd(_ ad: GADInterstitial) {
         print("Interstitial loaded successfully")
+        Analytics.logEvent("interstitialAdLoaded", parameters: nil)
         ad.present(fromRootViewController: self)
     }
     
@@ -107,13 +108,14 @@ class HomeTableViewController: UITableViewController,GADBannerViewDelegate,GADIn
         
         self.view.backgroundColor = UIColor.lightGray
         
-        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-            AnalyticsParameterItemID: "id-\(self.navigationItem.title!)" as NSObject,
-            AnalyticsParameterItemName: self.navigationItem.title! as NSObject,
-            AnalyticsParameterContentType: "launch" as NSObject
-            ])
+//        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+//            AnalyticsParameterItemID: "id-\(self.navigationItem.title!)" as NSObject,
+//            AnalyticsParameterItemName: self.navigationItem.title! as NSObject,
+//            AnalyticsParameterContentType: "launch" as NSObject
+//            ])
         
         
+        Analytics.logEvent("mainPageLoaded", parameters: nil)
         
         adBannerView.load(GADRequest())
         
